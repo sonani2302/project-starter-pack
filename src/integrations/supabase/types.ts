@@ -14,7 +14,311 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      orders: {
+        Row: {
+          awb_assigned_date: string | null
+          awb_no: string | null
+          billed_weight: number | null
+          channel: string
+          cod_charges: number | null
+          courier_company: string | null
+          created_at: string
+          customer_city: string | null
+          customer_email: string | null
+          customer_mobile: string | null
+          customer_name: string | null
+          customer_pincode: string | null
+          customer_state: string | null
+          fwd_charges: number | null
+          gst_charges: number | null
+          id: string
+          order_date: string
+          order_delivered_date: string | null
+          order_number: string
+          order_pickup_date: string | null
+          order_status: string
+          order_total: number
+          payment_method: string
+          product_discount: number | null
+          product_name: string
+          product_price: number
+          product_quantity: number
+          product_sku: string
+          rto_charges: number | null
+          store_name: string | null
+          store_order_date: string | null
+          sub_order_number: string | null
+          total_freight_charge: number | null
+          updated_at: string
+          user_id: string
+          warehouse_id: string | null
+          warehouse_name: string | null
+          zone: string | null
+        }
+        Insert: {
+          awb_assigned_date?: string | null
+          awb_no?: string | null
+          billed_weight?: number | null
+          channel: string
+          cod_charges?: number | null
+          courier_company?: string | null
+          created_at?: string
+          customer_city?: string | null
+          customer_email?: string | null
+          customer_mobile?: string | null
+          customer_name?: string | null
+          customer_pincode?: string | null
+          customer_state?: string | null
+          fwd_charges?: number | null
+          gst_charges?: number | null
+          id?: string
+          order_date: string
+          order_delivered_date?: string | null
+          order_number: string
+          order_pickup_date?: string | null
+          order_status: string
+          order_total: number
+          payment_method: string
+          product_discount?: number | null
+          product_name: string
+          product_price: number
+          product_quantity?: number
+          product_sku: string
+          rto_charges?: number | null
+          store_name?: string | null
+          store_order_date?: string | null
+          sub_order_number?: string | null
+          total_freight_charge?: number | null
+          updated_at?: string
+          user_id: string
+          warehouse_id?: string | null
+          warehouse_name?: string | null
+          zone?: string | null
+        }
+        Update: {
+          awb_assigned_date?: string | null
+          awb_no?: string | null
+          billed_weight?: number | null
+          channel?: string
+          cod_charges?: number | null
+          courier_company?: string | null
+          created_at?: string
+          customer_city?: string | null
+          customer_email?: string | null
+          customer_mobile?: string | null
+          customer_name?: string | null
+          customer_pincode?: string | null
+          customer_state?: string | null
+          fwd_charges?: number | null
+          gst_charges?: number | null
+          id?: string
+          order_date?: string
+          order_delivered_date?: string | null
+          order_number?: string
+          order_pickup_date?: string | null
+          order_status?: string
+          order_total?: number
+          payment_method?: string
+          product_discount?: number | null
+          product_name?: string
+          product_price?: number
+          product_quantity?: number
+          product_sku?: string
+          rto_charges?: number | null
+          store_name?: string | null
+          store_order_date?: string | null
+          sub_order_number?: string | null
+          total_freight_charge?: number | null
+          updated_at?: string
+          user_id?: string
+          warehouse_id?: string | null
+          warehouse_name?: string | null
+          zone?: string | null
+        }
+        Relationships: []
+      }
+      products: {
+        Row: {
+          created_at: string | null
+          id: string
+          image_url: string | null
+          product_url: string | null
+          shop_name: string
+          shopify_product_id: string
+          sku: string
+          title: string
+          updated_at: string | null
+          user_id: string | null
+          variant_id: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          image_url?: string | null
+          product_url?: string | null
+          shop_name: string
+          shopify_product_id: string
+          sku: string
+          title: string
+          updated_at?: string | null
+          user_id?: string | null
+          variant_id?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          image_url?: string | null
+          product_url?: string | null
+          shop_name?: string
+          shopify_product_id?: string
+          sku?: string
+          title?: string
+          updated_at?: string | null
+          user_id?: string | null
+          variant_id?: string | null
+        }
+        Relationships: []
+      }
+      purchase_batches: {
+        Row: {
+          created_at: string
+          file_names: string[]
+          id: string
+          notes: string | null
+          total_items: number
+          upload_date: string
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          file_names: string[]
+          id?: string
+          notes?: string | null
+          total_items?: number
+          upload_date?: string
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          file_names?: string[]
+          id?: string
+          notes?: string | null
+          total_items?: number
+          upload_date?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      purchases: {
+        Row: {
+          batch_id: string | null
+          created_at: string | null
+          date: string
+          id: string
+          notes: string | null
+          quantity: number
+          shop_name: string
+          sku: string
+          type: string
+          updated_at: string | null
+          user_id: string | null
+        }
+        Insert: {
+          batch_id?: string | null
+          created_at?: string | null
+          date?: string
+          id?: string
+          notes?: string | null
+          quantity?: number
+          shop_name: string
+          sku: string
+          type: string
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          batch_id?: string | null
+          created_at?: string | null
+          date?: string
+          id?: string
+          notes?: string | null
+          quantity?: number
+          shop_name?: string
+          sku?: string
+          type?: string
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "purchases_batch_id_fkey"
+            columns: ["batch_id"]
+            isOneToOne: false
+            referencedRelation: "purchase_batches"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      returns: {
+        Row: {
+          created_at: string
+          id: string
+          notes: string | null
+          quantity: number
+          return_date: string
+          shop_name: string
+          sku: string
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          notes?: string | null
+          quantity?: number
+          return_date: string
+          shop_name: string
+          sku: string
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          notes?: string | null
+          quantity?: number
+          return_date?: string
+          shop_name?: string
+          sku?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      user_credentials: {
+        Row: {
+          created_at: string
+          id: string
+          shopify_admin_token: string
+          shopify_store_url: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          shopify_admin_token: string
+          shopify_store_url: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          shopify_admin_token?: string
+          shopify_store_url?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
